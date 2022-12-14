@@ -17,10 +17,10 @@ with open(file, "r") as int_list:
     seperating = [x.strip(' ') for x in seperating]
     interaction_list.append(seperating)
 
-		interaction_list = pd.DataFrame(interaction_list)
+interaction_list = pd.DataFrame(interaction_list)
 
-		for i in interaction_list[0]:
-			one_letter_codes.append(aa_dict[i])
+for i in interaction_list[0]:
+	one_letter_codes.append(aa_dict[i])
 
 mutation_list = open("mutation_list", "w")	
 EvoEF_Mut_Pattern = one_letter_codes + interaction_list[1] + interaction_list[2].astype(str)
